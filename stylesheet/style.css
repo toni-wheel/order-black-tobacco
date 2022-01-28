@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+:root {
+  --bg-color: #000;
+  --header-height: 110px;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: var(--bg-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1142px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/** Фиксированный хэдер **/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header > .header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-col {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header-col-2 {
+  justify-content: end;
+}
+
+.header__logo {
+  width: 150px;
+  margin-right: 66px;
+}
+
+.header__menu {
+  display: flex;
+  margin-right: 56px;
+}
+
+.header__menu > li > a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 48px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.header__menu > li > a:hover {
+  text-decoration: underline;
+}
+
+.header__lang__btn {
+  cursor: pointer;
+  margin-right: 15pt;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #86888d;
+  background: none;
+  border: none;
+}
+
+.header__lang__btn:last-child {
+  margin-right: 0;
+}
+
+.header__lang__btn.active {
+  color: #fff;
+}
+
+.header__phone {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  margin-right: 44px;
+}
+
+.header__btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+
+.first {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 995px;
+}
+
+.first__info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.first__info > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.first__info__slogan {
+  font-size: 32px;
+  font-family: "BebasNeueRegular";
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 65px;
+  position: relative;
+}
+
+.first__info__slogan::after {
+  content: "";
+  position: absolute;
+  background-image: url(./image/fire-ico.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 55px;
+  height: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+}
+
+.first__info__about {
+  display: block;
+  font-size: 70px;
+  color: #fff;
+  font-family: "BebasNeueBold";
+  max-width: 532px;
+}
+
+.first__pic1 {
+  position: absolute;
+  width: 16%;
+  height: 60%;
+  bottom: -10%;
+  left: 0;
+}
+
+.first__pic1 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right bottom;
+}
+
+.first__pic2 {
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first__pic3 {
+  width: 45%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.first__pic3 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+/** Второй экран **/
+
+.second {
+  width: 100%;
+  height: 723px;
+  padding-top: 187px;
+}
+
+.second > .container {
+  display: flex;
+}
+
+.second-col-1 {
+  width: 100%;
+  max-width: 195px;
+}
+
+.second__header {
+  font-family: "BebasNeueBold";
+  font-size: 48px;
+  color: #fff;
+}
+
+.second-col-2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 68px;
+  padding-left: 195px;
+}
+
+.second__card {
+  width: 293px;
+  display: flex;
+  flex-direction: column;
+}
+
+.second__card > img {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 30px;
+}
+
+.second__card > span {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/** Третий экран **/
+
+.third {
+  width: 100%;
+  height: 853px;
+  position: relative;
+}
+
+.third-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.third-info > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.third__header {
+  font-size: 48px;
+  font-family: "BebasNeueBold";
+  color: #fff;
+  margin-bottom: 56px;
+}
+
+.third__list {
+  width: 100%;
+  max-width: 436px;
+}
+
+.third__list > li {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.third-pic {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.third-pic img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+/** Форма обратной связи **/
+
+.form {
+  width: 100%;
+  height: 629px;
+}
+
+.form > .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.form__canvas {
+  width: 100%;
+  height: 228px;
+  border: 1px solid #303030;
+  border-radius: 10px;
+  background-color: #1b1b1c;
+  background-image: url(./image/маска-формы.png);
+  background-size: cover;
+  padding: 53px;
+}
+
+.form__header {
+  display: block;
+  color: #fff;
+  font-size: 24px;
+  font-family: "BebasNeueBold";
+  margin-bottom: 45px;
+}
+
+.form__form {
+  display: flex;
+}
+
+.form__form__name > input,
+.form__form__email > input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 310px;
+  color: #fff;
+  height: 40px;
+  font-size: 16px;
+}
+
+.form__form__name > input::placeholder,
+.form__form__email > input::placeholder {
+  color: #fff;
+}
+
+.form__form__name {
+  margin-right: 45px;
+}
+
+.form__form__email {
+  margin-right: 56px;
+}
+
+.form__form__btn > input {
+  width: 266px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  color: #151515;
+}
+
+/** Секция: О нашем кальяне **/
+
+.about {
+  position: relative;
+  width: 100%;
+  height: 900px;
+}
+
+.about__pic1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 54%;
+  height: 840px;
+}
+
+.about__pic1 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right top;
+}
+
+.about__pic2 {
+  position: absolute;
+  bottom: 22%;
+  right: 0;
+  width: 40%;
+  height: 840px;
+}
+
+.about__pic2 > img {
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+  object-position: left bottom;
+}
+
+.about__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: #fff;
+  padding-top: 120px;
+}
+
+.about__info__header {
+  font-family: "BebasNeueBold";
+  font-size: 48px;
+  margin-bottom: 70px;
+}
+
+.about__info__list {
+  width: 100%;
+  max-width: 475px;
+}
+
+.about__info__list > li {
+  padding-left: 28px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about__info__list > li:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  width: 100%;
+  /**height: 1217px;**/
+  height: 211px;
+  border-top: 1px solid #fff;
+}
+
+.footer__contact {
+  width: 100%;
+  height: 211px;
+}
+
+.footer__contact > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer__contact__item > h3 {
+  color: #fff;
+  font-family: "BebasNeueBold";
+  font-size: 22px;
+  margin-bottom: 26px;
+}
+
+.footer__contact__item > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
